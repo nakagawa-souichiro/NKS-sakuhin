@@ -1,7 +1,7 @@
 <?php
 // データベースに接続
 function connectDB() {
-    $param = 'mysql:dbname=mediatest;host=localhost';
+    $param = 'mysql:dbname=nksdb;host=localhost';
     try {
         $pdo = new PDO($param, 'root', '');
         return $pdo;

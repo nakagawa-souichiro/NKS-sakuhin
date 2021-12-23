@@ -2,7 +2,7 @@
 function getTitle(){
     require_once 'functions.php';
     $dbh = connectDB();
-    $dbh->exec("USE mediatest");
+    $dbh->exec("USE nksdb");
     $sql = 'SELECT * FROM media ORDER BY id';
     $prepare = $dbh->prepare($sql);
     $prepare->execute();

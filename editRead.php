@@ -2,7 +2,7 @@
 require_once('functions.php');
 
 $dbh = connectDB();
-$dbh->exec("USE mediatest");
+$dbh->exec("USE nksdb");
 $id = $_GET['id'];
 $sql = 'SELECT * FROM media WHERE id=:id;';
 $prepare = $dbh->prepare($sql);

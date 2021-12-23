@@ -2,7 +2,7 @@
 require_once('functions.php');
 
 $pdo = connectDB();
-$pdo->exec("USE mediatest");
+$pdo->exec("USE nksdb");
 $title = $_POST['title'];
 $text = nl2br($_POST['text']);
 $listid = $_POST['listid'];
@@ -40,5 +40,5 @@ switch ($_FILES['upfile']['error']) {
     $stmt -> execute();
 
 $pdo = NULL;
-header('Location: select.php');
+header('Location: result.php');
 exit();

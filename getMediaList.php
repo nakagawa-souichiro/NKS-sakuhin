@@ -2,7 +2,7 @@
 function getMediaList(){
     require_once ('functions.php');
     $dbh = connectDB();
-    $dbh->exec("USE mediatest");
+    $dbh->exec("USE nksdb");
     $sql = 'SELECT * FROM medialist ORDER BY listid ASC';
     $prepare = $dbh->prepare($sql);
     $prepare->execute();
