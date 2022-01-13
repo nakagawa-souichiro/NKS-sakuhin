@@ -1,3 +1,16 @@
+<?php
+$error = "";
+if(!empty($_GET['error'])){
+    switch($_GET["error"]){
+        case "e1":
+            $error = "既にその会員IDは存在しています。";
+            break;
+        case "e2":
+            $error = "既にそのメールアドレスは使用されています。";
+            break;
+    }
+}
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -9,6 +22,7 @@
 <body>
     <form action="registerSignUp.php" method="post">
         <h2>新規会員登録</h2>
+        <p><?php if(!empty($_GET['error'])){ echo ($error);} ?></p>
         <p>会員ID：<input type="text" name="userid" required></p>
         <p>パスワード：<input type="password" name="password"required></p>
         <p>名前：<input type="text" name="name"required></p>
