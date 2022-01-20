@@ -9,13 +9,13 @@ $stmt->execute();
 $login = $stmt->fetchall(PDO::FETCH_ASSOC);
 for($i = 0;$i < count($login); $i++){
     if($login[$i]['userid'] === $userid){
-        header('Location: signUp.php?error='.e1);
+        header('Location: signUp.php?error='."e1");
         exit();
     }
 }
 for($i = 0;$i < count($login); $i++){
     if($login[$i]['address'] === $address){
-        header('Location: signUp.php?error='.e2);
+        header('Location: signUp.php?error='."e2");
         exit();
     }
 }
@@ -26,6 +26,6 @@ $stmt->bindParam(':name', htmlspecialchars($_POST['name']));
 $stmt->bindParam(':address', $address);
 //$stmt->bindParam(':tel', $_POST['tel']);
 $stmt->execute();
-header('Location: result.php?result='.r1);
+header('Location: result.php?result='."r1");
 exit();
 ?>

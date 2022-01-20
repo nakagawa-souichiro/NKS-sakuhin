@@ -42,5 +42,5 @@ $stmt -> bindValue(":userid",$userid, PDO::PARAM_STR);
 $stmt -> execute();
 
 $pdo = NULL;
-header('Location: result.php?result='.r2);
+header('Location: result.php?result='."r2");
 exit();
