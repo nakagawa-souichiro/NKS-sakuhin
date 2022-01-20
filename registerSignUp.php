@@ -1,7 +1,7 @@
 <?php
 require_once('functions.php');
-$userid = $_POST['userid'];
-$address = $_POST['address'];
+$userid = htmlspecialchars($_POST['userid']);
+$address = htmlspecialchars($_POST['address']);
 $dbh = connectDB();
 $sql = "SELECT * from userdata;";
 $stmt = $dbh->prepare($sql);
@@ -21,11 +21,11 @@ for($i = 0;$i < count($login); $i++){
 }
 $stmt = $dbh->prepare("INSERT INTO userdata (userid, password, name, address)VALUES(:userid,:password,:name,:address)");
 $stmt->bindParam(':userid', $userid);
-$stmt->bindParam(':password', $_POST['password']);
-$stmt->bindParam(':name', $_POST['name']);
+$stmt->bindParam(':password', htmlspecialchars($_POST['password']));
+$stmt->bindParam(':name', htmlspecialchars($_POST['name']));
 $stmt->bindParam(':address', $address);
 //$stmt->bindParam(':tel', $_POST['tel']);
 $stmt->execute();
-header('Location: index.php');
+header('Location: result.php?result='.r1);
 exit();
 ?>

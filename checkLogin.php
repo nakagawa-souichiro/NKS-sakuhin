@@ -6,10 +6,9 @@ session_regenerate_id(true);
 $dbh = connectDB();
 $dbh->exec("USE nksdb");
 
-$userid = $_POST['userid'];
-$password = $_POST['password'];
-$errorMessage = "そのユーザーIDは存在しません。";
-$url = "index.php";
+$userid = htmlspecialchars($_POST['userid']);
+$password = htmlspecialchars($_POST['password']);
+$url = "login.php?error=e1";
 $name = "";
 $sql = "SELECT * from userdata;";
 $stmt = $dbh->prepare($sql);
@@ -17,16 +16,16 @@ $stmt->execute();
 $login = $stmt->fetchall(PDO::FETCH_ASSOC);
 for($i = 0;$i < count($login); $i++){
     if($login[$i]['userid'] === $userid){
-        $errorMessage = "パスワードに誤りがあります。";
+        $url = "login.php?error=e2";
         if($login[$i]["password"] === $password){
-            $name = $login[$i]["name"];
+            $name = $login[$i];
             $url = "main.php";
+            break;
         }
     }
 }
 
 $dbh = NULL;
-$_SESSION["error"] = $errorMessage;
 $_SESSION["NAME"] = $name;
-header('Location:' .$url);
+header('Location: '.$url);
 exit();

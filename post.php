@@ -1,14 +1,23 @@
+<?php
+session_start();
+if(empty($_SESSION["NAME"])){
+    header('Location: login.php?login='.ログインしてください);
+    exit();
+}
+?>
 <!DOCTYPE HTML>
 
 <html lang="ja">
 <head>
     <meta charset="utf-8">
     <title>投稿画面</title>
+    <link rel = "stylesheet" href="toukou.css"/>
+    <link rel = "stylesheet" href="koumoku.css"/>
 </head>
 
-<body>
+<body class="bt-samp62">
 	<h2>投稿画面</h2>
-	<a href="select.php">戻る</a>
+	<a href="index.php" class="bt-samp63">一覧画面へ</a>
     <form action="registerMedia.php" enctype="multipart/form-data" method="post">
         <table border="1" style="border-collapse: collapse">
             <tr><th>タイトル</th><td><input type="text" value="" name="title" placeholder="タイトルを入力してください" size="50" required></td></tr>
@@ -18,7 +27,6 @@
             <select name="listid">
             <?php
             require_once ('getMediaList.php');
-            session_start();
             getMediaList();
             foreach($_SESSION['list']as $list){
                 printf("<option value=\"%s\">%s</option>",$list['listid'],$list['medialist']);
