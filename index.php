@@ -1,34 +1,33 @@
-<?php
-session_start();
-?>
-<!doctype html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>ログイン</title>
-        <link rel="stylesheet" href="style.css" media="all" />
-    </head>
-    <body>
-        <div class ="form-wrapper">
-        <form id="loginForm" name="loginForm" action="checkLogin.php" method="POST">
-            <fieldset>
-                <legend>ログイン</legend>
-                <div><font color="#ff0000"><?php if(!empty($_SESSION['error'])){ echo htmlspecialchars($_SESSION["error"], ENT_QUOTES);} ?></font></div>
-                <label for="userid" class = "userid">ユーザーID　</label><input type="text" id="userid" name="userid" placeholder="ユーザーIDを入力" value="<?php if (!empty($_POST["userid"])) {echo htmlspecialchars($_POST["userid"], ENT_QUOTES);} ?>"required>
-                <br>
-                <label for="password" class = "pass">パスワード　</label><input type="password" id="password" name="password" value="" placeholder="パスワードを入力" required>
-                <br>
-                <input type="submit" id="login" name="login" value="ログイン">
-            </fieldset>
-        </form>
-        </div>
-        <br>
-​
-        <form action="signUp.php">
-            <fieldset>
-                <legend>新規登録はこちら</legend>
-                <input type="submit" value="新規登録">
-            </fieldset>
-        </form>
-    </body>
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>media</title>
+    <link rel="stylesheet" href="koumoku.css">
+</head>
+<body>
+	<header>
+        <nav>
+            <ul class="clearfix">
+                <li><a href="login.php">ログイン画面</a></li>
+                <li><a href="post.php">投稿画面</a></li>
+                <li><a href="Logout.php">ログアウト</a></li>
+            </ul>
+        </nav>
+    </header>
+	<h2>ゲーム名一覧</h2>
+	<?php
+	require_once("getMediaList.php");
+	getMediaList();
+	print('<table border="1" style="border-collapse: collapse">');
+	printf("<tr><th>カテゴリー</th></tr>");
+	$nrows = count($_SESSION['list']);
+	for($i = 0; $i < $nrows; $i++){
+	    print('<tr>');
+	    printf("<td><a href=\catId.php?id=%d\">%s</a></td>",$_SESSION['list'][$i]['listid'],$_SESSION['list'][$i]['medialist']);
+	    print('</tr>');
+	}
+	print('</table>');
+	?>
+</body>
 </html>

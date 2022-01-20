@@ -1,0 +1,32 @@
+@charset "utf-8";
+header nav {
+    background-color: aliceblue;
+    padding: 15px;
+    margin: 0px;
+}
+header nav ul {
+    margin: 0px auto;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+}
+header nav li {
+    list-style: none;
+    background-color: turquoise;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    float: left;
+    margin: 0px 2px;
+    width: 16%;
+}
+header nav li a {
+    color: while;
+    text-decoration-line: none;
+}
+.clearfix::after {
+    content: "";
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
