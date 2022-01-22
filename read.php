@@ -30,7 +30,14 @@
         </nav>
     </header>
 <?php session_start();?>
-	<h2><?=htmlspecialchars($_SESSION['media'][0]['title'], ENT_QUOTES, "UTF-8") ?>(<?=htmlspecialchars($_SESSION['media'][0]['userid'], ENT_QUOTES, "UTF-8") ?>)</h2>
+	<h2><?=htmlspecialchars($_SESSION['media'][0]['title'], ENT_QUOTES, "UTF-8") ?>
+	(<?php
+	foreach($_SESSION["user"]as $user){
+	    if($_SESSION["media"][0]["userid"] === $user["userid"]){
+	        printf(htmlspecialchars($user["name"], ENT_QUOTES, "UTF-8"));
+	    }
+	}
+	?>)</h2>
     <div>
         <?php
         print("<video src=\"importMedia.php\" controls></video>");

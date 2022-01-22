@@ -18,14 +18,20 @@
 	<h2>タイトルから選んでください。</h2>
 	<?php
 	require_once("getTitle.php");
+	require_once("getUser.php");
 	getTitle();
+	getUser();
 	print('<table border="1" style="border-collapse: collapse">');
 	printf("<tr><th>タイトル</th><th>作成者</th></tr>");
 	$nrows = count($_SESSION['title']);
 	for($i = 0; $i < $nrows; $i++){
 	    print('<tr>');
 	    printf("<td><a href=\"editRead.php?id=%d\">%s</a></td>",$_SESSION['title'][$i]['id'],htmlspecialchars($_SESSION['title'][$i]['title'], ENT_QUOTES, "UTF-8"));
-	    printf("<td><p>%s<p></td>",$_SESSION['title'][$i]['userid']);
+	    foreach($_SESSION["user"]as $user){
+	        if($_SESSION["title"][$i]["userid"] === $user["userid"]){
+	           printf("<td><p>%s<p></td>",$user["name"]);
+	        }
+	    }
 	    print('</tr>');
 	}
 	print('</table>');
