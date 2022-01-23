@@ -1,6 +1,5 @@
 <?php
 function getTitle(){
-    session_start();
     $catId = $_SESSION['catId'];
     require_once 'functions.php';
     $dbh = connectDB();

@@ -2,16 +2,23 @@
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-    <title>media</title>
+    <title>ビデテキgames</title>
     <link rel="stylesheet" href="koumoku.css">
 </head>
 <body>
 	<header>
         <nav>
             <ul class="clearfix">
-                <li><a href="login.php">ログイン画面</a></li>
-                <li><a href="post.php">投稿画面</a></li>
-                <li><a href="Logout.php">ログアウト</a></li>
+                <li><a href="index.php">一覧へ</a></li>
+                <li><a href="post.php">投稿する</a></li>
+                <?php
+                session_start();
+                if(empty($_SESSION["NAME"])){
+                    print('<li><a href="login.php">ログイン</a></li>');
+                }else{
+                    print('<li><a href="Logout.php">ログアウト</a></li>');
+                }
+                ?>
             </ul>
         </nav>
     </header>
@@ -24,7 +31,7 @@
 	$nrows = count($_SESSION['list']);
 	for($i = 0; $i < $nrows; $i++){
 	    print('<tr>');
-	    printf("<td><a href=\catId.php?id=%d\">%s</a></td>",$_SESSION['list'][$i]['listid'],$_SESSION['list'][$i]['medialist']);
+	    printf("<td><a href=\"catId.php?id=%d\">%s</a></td>",$_SESSION['list'][$i]['listid'],$_SESSION['list'][$i]['medialist']);
 	    print('</tr>');
 	}
 	print('</table>');

@@ -9,21 +9,27 @@ if(!isset($_SESSION["NAME"])){
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>メイン</title>
+        <title>ビデテキgames</title>
         <link rel="stylesheet" href="koumoku.css">
+        <link rel="stylesheet" href="Main.css">
     </head>
 <body>
     <header>
         <nav>
             <ul class="clearfix">
-                <li><a href="index.php">一覧画面</a></li>
-                <li><a href="post.php">投稿画面</a></li>
-                <li><a href="Logout.php">ログアウト</a></li>
+                <li><a href="index.php">一覧へ</a></li>
+                <li><a href="post.php">投稿する</a></li>
+                <?php
+                if(empty($_SESSION["NAME"])){
+                    print('<li><a href="login.php">ログイン</a></li>');
+                }else{
+                    print('<li><a href="Logout.php">ログアウト</a></li>');
+                }
+                ?>
             </ul>
         </nav>
     </header>
-    <h1>メイン画面</h1>
     <!-- ユーザーIDにHTMLタグが含まれても良いようにエスケープする -->
-    <p>ようこそ<u><?php echo htmlspecialchars($_SESSION["NAME"]["name"], ENT_QUOTES, "UTF-8"); ?></u>さん</p>
+    <div class="test">ようこそ<u><?php echo htmlspecialchars($_SESSION["NAME"]["name"], ENT_QUOTES, "UTF-8"); ?></u>さん</div>
 </body>
 </html>

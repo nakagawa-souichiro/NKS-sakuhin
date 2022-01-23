@@ -1,0 +1,14 @@
+/*main.php*/
+.test {
+    padding: 8px 29px;
+    font-size: 24px;
+    font-weight: bold;
+    margin: 22px 122px 22px 122px;
+    text-align: center;
+    color: #2c2c2f;
+    background: lightgreen;
+    border-top: double 4px darkcyan;
+    border-left: double 4px darkcyan;
+    border-right: double 4px darkcyan;
+    border-bottom: double 4px darkcyan;
+}

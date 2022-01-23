@@ -17,7 +17,7 @@ if(!empty($_GET['error'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>会員登録画面</title>
+    <title>ビデテキgames</title>
     <link href="kaiin.css" rel="stylesheet"type="text/css">
     <link rel="stylesheet" href="koumoku.css">
 </head>
@@ -25,9 +25,16 @@ if(!empty($_GET['error'])){
 	<header>
         <nav>
             <ul class="clearfix">
-                <li><a href="login.php">ログイン</a></li>
-                <li><a href="index.php">一覧画面</a></li>
-                <li><a href="Logout.php">ログアウト</a></li>
+                <li><a href="index.php">一覧へ</a></li>
+                <li><a href="post.php">投稿する</a></li>
+                <?php
+                session_start();
+                if(empty($_SESSION["NAME"])){
+                    print('<li><a href="login.php">ログイン</a></li>');
+                }else{
+                    print('<li><a href="Logout.php">ログアウト</a></li>');
+                }
+                ?>
             </ul>
         </nav>
     </header>
