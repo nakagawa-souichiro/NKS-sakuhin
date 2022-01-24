@@ -1,7 +1,7 @@
 <?php
 session_start();
 if(empty($_SESSION["NAME"])){
-    header('Location: login.php?login='.ログインしてください);
+    header('Location: login.php?login='."ログインしてください");
     exit();
 }
 ?>
@@ -16,6 +16,15 @@ if(empty($_SESSION["NAME"])){
 </head>
 
 <body class="bt-samp62">
+	<header>
+        <nav>
+            <ul class="clearfix">
+                <li><a href="index.php">一覧へ</a></li>
+                <li><a href="#">投稿する</a></li>
+				<li><a href="Logout.php">ログアウト</a></li>
+            </ul>
+        </nav>
+    </header>
 	<h2>投稿画面</h2>
 	<a href="index.php" class="bt-samp63">一覧画面へ</a>
     <form action="registerMedia.php" enctype="multipart/form-data" method="post">

@@ -1,22 +1,24 @@
+/*投稿画面の設定*/
+​
 .bt-samp62 {
     margin: 0px;
     /*背景*/
-    background-color: ghostwhite;
+    background-color: whitesmoke;
 }
 .bt-samp62 h2 {
-    padding: 0.4em 0.5em;/*文字の上下 左右の余白*/
+    padding: 0.4em 1.2em;/*文字の上下 左右の余白*/
     margin: 0px;
-    text-align: center;
-    color: #494949;/*文字色*/
+    color: mediumseagreen;/*文字色*/
     background: white;/*背景色*/
-    border-left: solid 5px #7db4e6;/*左線*/
-    border-right: solid 5px #7db4e6;/*右線*/
-    border-bottom: solid 3px #d7d7d7;/*下線*/
+    border-top: mediumseagreen;
+    border-left: solid 5px mediumseagreen;/*左線*/
+    border-right: solid 5px mediumseagreen;/*右線*/
+    border-bottom: solid 2px #d7d7d7;/*下線*/
   }
-​
 /*テーブルの設定*/
 .bt-samp62 table {
-    margin: 10px 383px;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     padding: 10px 10px 10px 10px;
 }
@@ -24,18 +26,19 @@
     background-color: turquoise;
     /*background-color: oldlace;*/
     /*background-color: palegreen;*/
-    padding: 10px 10px 10px 10px;
+    padding: 15px 15px 15px 15px;
 }
 .bt-samp62 table td {
     background-color: white;
     padding:5px 5px 5px 5px;
 }
-​
 /*投稿ボタンの設定*/
 input[type="submit"][value="投稿"]  {
     display: block;
     padding:10px 15px;
-    margin:4px 605px;
+    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
     font-weight: bold;
     text-align: center;
@@ -60,7 +63,7 @@ a.bt-samp63 {
     display: block;
     height: 30px;
     width: 120px;
-    margin: 10px 16px;
+    margin: 10px 56px;
     text-decoration: none;
     font-weight: bold;
     line-height: 30px;
