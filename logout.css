@@ -24,9 +24,9 @@
 a.bt-samp64 {
     display: block;
     height: 30px;
-    width: 150px;
-    float: right;
-    margin:0px 220px;
+    width: 170px;
+    margin-left: auto;
+    margin-right: auto;
     text-decoration: none;
     font-weight: bold;
     line-height: 30px;
