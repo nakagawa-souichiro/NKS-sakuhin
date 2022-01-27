@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>ビデテキgames</title>
     <link rel="stylesheet" href="koumoku.css">
+    <link rel="stylesheet" href="user.css">
     <script>
 	function confirm_test() {
     	var select = confirm("本当に削除しますか？この操作はやり直すことができません。");
@@ -11,10 +12,10 @@
 	}
 </script>
 </head>
-<body>
+<body class="titlelist">
 	<header>
         <nav>
-			<img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
+        	<img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
@@ -72,6 +73,5 @@
 	    print('</table>');
 	}
 	?>
-	<a href="titleList.php">戻る</a>
 </body>
 </html>
