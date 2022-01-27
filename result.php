@@ -25,6 +25,7 @@ if(!empty($_GET['result'])){
 <body>
 <header>
         <nav>
+            <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
                 <li><a href="login.php">ログイン画面</a></li>
                 <li><a href="post.php">投稿画面</a></li>

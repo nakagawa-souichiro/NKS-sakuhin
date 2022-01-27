@@ -4,10 +4,12 @@
     <meta charset="utf-8">
     <title>ビデテキgames</title>
     <link rel="stylesheet" href="koumoku.css">
+    <link rel="stylesheet" href="choose.css">
 </head>
-<body>
+<body class="video">
 	<header>
         <nav>
+        	<img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
@@ -22,7 +24,8 @@
             </ul>
         </nav>
     </header>
-	<h2>タイトルから選んでください。</h2>
+	<h2 >タイトルから選んでください。</h2>
+	<a href="index.php" class="idou">一覧に戻る</a>
 	<?php
 	require_once("getTitle.php");
 	require_once("getUser.php");
@@ -39,6 +42,5 @@
 	}
 	print('</table>');
 	?>
-	<a href="index.php">戻る</a>
 </body>
 </html>

@@ -23,6 +23,7 @@
 	<header>
         <nav>
             <ul class="clearfix">
+                <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
                 <?php

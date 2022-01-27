@@ -18,6 +18,7 @@ if(empty($_SESSION["NAME"])){
 <body class="bt-samp62">
 	<header>
         <nav>
+            <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="#">投稿する</a></li>

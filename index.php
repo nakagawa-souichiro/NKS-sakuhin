@@ -9,6 +9,7 @@
 <body class="ichiran">
 	<header>
         <nav>
+            <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
                 <li><a href="#">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
