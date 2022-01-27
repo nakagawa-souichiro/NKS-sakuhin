@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="koumoku.css">
     <style>
         #right{
-            top: 70px;
+            top: 140px;
             right: 70px;
             bottom: 30px;
             width: 500px;
@@ -16,6 +16,9 @@
         #textarea {
             margin : 1rem auto;
             padding : 1rem;
+        }
+        video{
+            height: 380px;
         }
     </style>
 </head>
