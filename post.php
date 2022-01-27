@@ -32,7 +32,7 @@ if(empty($_SESSION["NAME"])){
         <table border="2" style="border-collapse: collapse">
             <tr><th>タイトル</th><td><input type="text" value="" name="title" placeholder="タイトルを入力してください" size="50" required></td></tr>
             <tr><th><label>動画(mp4)</label></th><td><input type="file" value="" name="upfile" accept="video/mp4" required></td></tr>
-            <tr><th><label>テキスト</label></th><td><textarea name="text" placeholder="テキストを入力してください" rows="11" cols="50" required></textarea></td></tr>
+            <tr><th><label>テキスト</label></th><td><textarea name="text" placeholder="テキストを入力してください" rows="10" cols="50" required></textarea></td></tr>
             <tr><th>ゲーム名</th><td>
             <select name="listid">
             <?php

@@ -20,6 +20,7 @@ if(!empty($_GET['result'])){
 <meta charset="utf-8">
 <title>選択画面</title>
 <link rel="stylesheet" href="koumoku.css">
+<link rel="stylesheet" href="result.css">
 </head>
 
 <body>
@@ -34,6 +35,6 @@ if(!empty($_GET['result'])){
         </nav>
     </header>
 <h2><?php echo($result); ?></h2>
-<a href="<?php echo($test); ?>">戻る</a>
+<a href="<?php echo($test); ?>" class="bt-samp63">戻る</a>
 </body>
 </html>
