@@ -6,7 +6,7 @@ $pdo->exec("USE nksdb");
 $title = $_POST['title'];
 $text = nl2br(htmlspecialchars($_POST['text']));
 $listid = $_POST['listid'];
-$userid = $_SESSION["NAME"]["userid"];
+$userid = $_SESSION["NAME"]["id"];
     //エラーチェック
 switch ($_FILES['upfile']['error']) {
     case UPLOAD_ERR_OK: // OK
@@ -38,7 +38,7 @@ $stmt -> bindValue(":extension",$extension, PDO::PARAM_STR);
 $stmt -> bindValue(":raw_data",$raw_data, PDO::PARAM_STR);
 $stmt -> bindValue(":text",$text, PDO::PARAM_STR);
 $stmt -> bindValue(":listid",$listid, PDO::PARAM_INT);
-$stmt -> bindValue(":userid",$userid, PDO::PARAM_STR);
+$stmt -> bindValue(":userid",$userid, PDO::PARAM_INT);
 $stmt -> execute();
 
 $pdo = NULL;

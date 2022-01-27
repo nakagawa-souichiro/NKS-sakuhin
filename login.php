@@ -28,7 +28,7 @@ if(!empty($_GET['error'])){
                 <?php
                 session_start();
                 if(empty($_SESSION["NAME"])){
-                    print('<li><a href="login.php">ログイン</a></li>');
+                    print('<li><a href="#">ログイン</a></li>');
                 }else{
                     print('<li><a href="Logout.php">ログアウト</a></li>');
                 }

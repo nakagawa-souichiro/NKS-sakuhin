@@ -38,11 +38,9 @@
     </header>
 	<h2><?=htmlspecialchars($_SESSION['media'][0]['title'], ENT_QUOTES, "UTF-8") ?>
 	(<?php
-	foreach($_SESSION["user"]as $user){
-	    if($_SESSION["media"][0]["userid"] === $user["userid"]){
-	        printf(htmlspecialchars($user["name"], ENT_QUOTES, "UTF-8"));
-	    }
-	}
+	require_once("getUser.php");
+	getUser($_SESSION["media"][0]["userid"]);
+	print($_SESSION["user"][0]["name"]);
 	?>)</h2>
     <div>
         <?php

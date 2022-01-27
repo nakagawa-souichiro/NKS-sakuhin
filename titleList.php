@@ -27,18 +27,14 @@
 	require_once("getTitle.php");
 	require_once("getUser.php");
 	getTitle();
-	getUser();
 	print('<table border="1" style="border-collapse: collapse">');
 	printf("<tr><th>タイトル</th><th>作成者</th></tr>");
 	$nrows = count($_SESSION['title']);
 	for($i = 0; $i < $nrows; $i++){
+	    getUser($_SESSION["title"][$i]["userid"]);
 	    print('<tr>');
 	    printf("<td><a href=\"editRead.php?id=%d\">%s</a></td>",$_SESSION['title'][$i]['id'],htmlspecialchars($_SESSION['title'][$i]['title'], ENT_QUOTES, "UTF-8"));
-	    foreach($_SESSION["user"]as $user){
-	        if($_SESSION["title"][$i]["userid"] === $user["userid"]){
-	           printf("<td><p>%s<p></td>",$user["name"]);
-	        }
-	    }
+	    printf("<td><a href=\"editUser.php?id=%d\">%s</a></td>",$_SESSION["title"][$i]["userid"],$_SESSION["user"][0]["name"]);
 	    print('</tr>');
 	}
 	print('</table>');
