@@ -40,7 +40,7 @@ if(!empty($_GET['error'])){
     <?php if(!empty($_GET['login'])){print("<p>ログインしてください</p>");} ?>
     <div class ="form-wrapper">
     	<form id="loginForm" name="loginForm" action="checkLogin.php" method="POST">
-			<fieldset>
+        <fieldset style="border:1px solid mediumseagreen;">
 				<legend>ログイン</legend>
             	<div><font color="#ff0000"><?php if(!empty($_GET['error'])){ echo htmlspecialchars($error, ENT_QUOTES);} ?></font></div>
             	<label for="userid" class = "userid">ユーザーID　</label><input type="text" id="userid" name="userid" placeholder="ユーザーIDを入力" value=""required>
@@ -54,7 +54,7 @@ if(!empty($_GET['error'])){
     <br>
 ​
     <form action="signUp.php">
-        <fieldset>
+        <fieldset style="border:1px solid mediumseagreen;">
             <legend>新規登録はこちら</legend>
             <input type="submit" value="新規登録">
         </fieldset>
