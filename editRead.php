@@ -12,6 +12,6 @@ $result = $prepare->fetchAll(PDO::FETCH_ASSOC);
 session_start();
 $_SESSION['media'] = $result;
 $dbh = NULL;
-header('Location: read.php');
+header('Location: read.php?id='.$_GET['id']);
 exit();
 ?>

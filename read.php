@@ -25,8 +25,8 @@
 <body>
 	<header>
         <nav>
+        	<img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
-                <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
                 <?php
@@ -56,6 +56,23 @@
             <P><?=$_SESSION['media'][0]['text'] ?></P>
         </div>
     </div>
-    <a href="titleList.php">戻る</a>
+    <p><a href="titleList.php">戻る</a>
+    <?php
+    require_once ('getTitle.php');
+    getTitle3($_GET["id"]);
+    getTitle4($_GET["id"]);
+    if(!empty($_SESSION["oldTitle"])){
+        printf("<a href=\"editRead.php?id=%d\">%s</a>",$_SESSION['oldTitle'][0]['id'],htmlspecialchars($_SESSION['oldTitle'][0]['title'], ENT_QUOTES, "UTF-8"));
+    }else{
+        print("先頭");
+    }
+    print("<<〇>>");
+    if(!empty($_SESSION["newTitle"])){
+        printf("<a href=\"editRead.php?id=%d\">%s</a>",$_SESSION['newTitle'][0]['id'],htmlspecialchars($_SESSION['newTitle'][0]['title'], ENT_QUOTES, "UTF-8"));
+    }else{
+        print("最後尾");
+    }
+    ?>
+    </p>
 </body>
 </html>
