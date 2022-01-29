@@ -44,7 +44,9 @@
 	}
 	if($bool){
 	    print('<h2>あなたの投稿一覧です。</h2>');
-	    print('<table border="1" style="border-collapse: collapse">');
+		print('<a href="index.php" class="idou2">カテゴリー一覧に戻る</a>');
+		print('<a href="titleList.php" class="idou3">タイトル一覧に戻る</a>');
+	    print('<table border="2" style="border-collapse: collapse">');
 	    printf("<tr><th>タイトル</th><th>カテゴリー</th><th>機能</th></tr>");
 	    $nrows = count($_SESSION['title']);
 	    for($i = 0; $i < $nrows; $i++){
@@ -60,7 +62,9 @@
 	    print('</table>');
 	}else{
 	    printf('<h2>%sさんの投稿一覧です。</h2>',$_SESSION["user"][0]["name"]);
-	    print('<table border="1" style="border-collapse: collapse">');
+		print('<a href="index.php" class="idou2">カテゴリー一覧に戻る</a>');
+		print('<a href="titleList.php" class="idou3">タイトル一覧に戻る</a>');
+	    print('<table border="2" style="border-collapse: collapse">');
 	    printf("<tr><th>タイトル</th><th>カテゴリー</th></tr>");
 	    $nrows = count($_SESSION['title']);
 	    for($i = 0; $i < $nrows; $i++){
