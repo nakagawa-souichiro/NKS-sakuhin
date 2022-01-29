@@ -18,8 +18,9 @@ if(!empty($_GET['error'])){
         <title>ビデテキgames</title>
         <link rel="stylesheet" href="style.css" media="all" />
         <link rel="stylesheet" href="koumoku.css">
+        <link rel="stylesheet" href="field.css">
     </head>
-<body>
+<body class="ine">
     <header>
         <nav>
             <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
@@ -37,24 +38,23 @@ if(!empty($_GET['error'])){
             </ul>
         </nav>
     </header>
-    <?php if(!empty($_GET['login'])){print("<p>ログインしてください</p>");} ?>
+    <h2 class="ass">ログイン画面</h2>
+    <?php if(!empty($_GET['login'])){print("<p class=note>⚠ ログインしてください</p>");} ?>
     <div class ="form-wrapper">
     	<form id="loginForm" name="loginForm" action="checkLogin.php" method="POST">
-        <fieldset style="border:1px solid mediumseagreen;">
+        <fieldset style="border:2px solid mediumseagreen;" class="met">
 				<legend>ログイン</legend>
             	<div><font color="#ff0000"><?php if(!empty($_GET['error'])){ echo htmlspecialchars($error, ENT_QUOTES);} ?></font></div>
-            	<label for="userid" class = "userid">ユーザーID　</label><input type="text" id="userid" name="userid" placeholder="ユーザーIDを入力" value=""required>
+            	<label for="userid" class = "userid">ユーザーID　</label><input type="text" id="userid" name="userid" placeholder="ユーザーIDを入力" value=""required class="hoge">
             	<br>
-            	<label for="password" class = "pass">パスワード　</label><input type="password" id="password" name="password" value="" placeholder="パスワードを入力" required>
+            	<label for="password" class = "pass">パスワード　</label><input type="password" id="password" name="password" value="" placeholder="パスワードを入力" required class="hoge">
             	<br>
             	<input type="submit" id="login" name="login" value="ログイン">
         	</fieldset>
 		</form>
     </div>
-    <br>
-​
     <form action="signUp.php">
-        <fieldset style="border:1px solid mediumseagreen;">
+        <fieldset style="border:2px solid mediumseagreen;" class="set">
             <legend>新規登録はこちら</legend>
             <input type="submit" value="新規登録">
         </fieldset>

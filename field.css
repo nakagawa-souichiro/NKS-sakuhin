@@ -1,0 +1,90 @@
+.ass {
+    text-align: center;
+    padding: 0.4em;/*文字の上下 左右の余白*/
+    margin: 0px;
+    color: mediumseagreen;/*文字色*/
+    background: white;/*背景色*/
+    border-top: mediumseagreen;
+    border-left: solid 5px mediumseagreen;/*左線*/
+    border-right: solid 5px mediumseagreen;/*右線*/
+    border-bottom: solid 2px #d7d7d7;/*下線*/
+}
+.note {
+    text-align: center;
+    font-weight: bold;
+    width: 190px;
+    margin-top:15px;
+    margin-left: auto;
+    margin-right: auto;
+    padding:5px;
+    border: solid;
+    border-color: #031de2;
+    background-color: lightskyblue;
+    color:black;
+}
+.ine {
+    margin:0px;
+    background-color: ghostwhite;
+}
+.met {
+    width: 450px;
+    background-color: white;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.met legend {
+    font-weight: bold;
+    font-size: 21px;
+}
+.met div {
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+.met label {
+    padding: 3px;
+}
+input.hoge {
+    width: 220px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    margin:5px;
+}
+input[type="submit"][value="ログイン"] {
+    margin-top: 13px;
+    margin-bottom: 11px;
+    padding-top: 6px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 6px;
+    background-color: cadetblue;
+    color: white;
+    font-size:15px;
+    font-weight: bold;
+}
+/*新規登録*/
+.set {
+    width: 200px;
+    background-color: white;
+    text-align: center;
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.set legend {
+    font-weight: bold;
+    font-size: 18px;
+}
+input[type="submit"][value="新規登録"] {
+    margin-top:4px;
+    margin-bottom: 9px;
+    padding-top:6px;
+    padding-left: 19px;
+    padding-right: 19px;
+    padding-bottom: 6px;
+    color:black;
+    background-color: khaki;
+    font-size: 15px;
+    font-weight: bold;
+}

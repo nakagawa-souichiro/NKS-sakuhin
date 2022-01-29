@@ -1,20 +1,25 @@
 .logouttext {
     margin:0px;
-    background-color: whitesmoke;
+    background-color: ghostwhite;
 }
 /*logout.php*/
 .logouttext h2{
-    padding: 0.4em 1.5em;/*文字の上下 左右の余白*/
+    text-align: center;
+    padding: 0.4em;/*文字の上下 左右の余白*/
     color: #494949;/*文字色*/
     background: white;/*背景色*/
     border-left: solid 5px mediumseagreen;/*左線*/
     border-right: solid 5px mediumseagreen;/*右線*/
     border-bottom: solid 3px #d7d7d7;/*下線*/
-    margin: 0;
+    color:mediumseagreen;
 }
 .logouttext div{
+    width: 420px;
     text-align: center;
-    margin: 25px 145px 25px 145px;
+    margin-top:20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     padding: 6px;
     border: 4px double #333333;
     background-color: cadetblue;
