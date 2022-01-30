@@ -1,9 +1,26 @@
 /*main.php*/
+.MAIN {
+    margin:0px;
+    background-color: ghostwhite;
+}
+.MAIN h2{
+    text-align: center;
+    padding: 0.4em;/*文字の上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: white;/*背景色*/
+    border-left: solid 5px mediumseagreen;/*左線*/
+    border-right: solid 5px mediumseagreen;/*右線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+    color:mediumseagreen;
+}
 .test {
+    width:500px;
     padding: 8px 29px;
     font-size: 24px;
     font-weight: bold;
-    margin: 22px 122px 22px 122px;
+    margin-top:15px;
+    margin-left:auto;
+    margin-right:auto;
     text-align: center;
     color: #2c2c2f;
     background: lightgreen;
@@ -11,4 +28,64 @@
     border-left: double 4px darkcyan;
     border-right: double 4px darkcyan;
     border-bottom: double 4px darkcyan;
+}
+a.top {
+    font-size: 18px;
+    display: block;
+    height: 41px;
+    width: 180px;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 41px;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    border-bottom: 1px solid #b2b1b1;
+    color: white;
+    background: #339999;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #339999), color-stop(0.5, #339999));
+    background: -moz-linear-gradient(top, #339999 50%, #339999 50%);
+    background: -o-linear-gradient(top, #339999 50%, #339999 50%);
+    background: -ms-linear-gradient(top, #339999 50%, #339999 50%);
+    background: linear-gradient(top, #339999 50%, #339999 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#339999 50%', endColorstr='#339999 50%');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#339999 50%', endColorstr='#339999 50%')";
+}
+a.top:active {
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: none;
+}
+a.desk {
+    font-size: 18px;
+    display: block;
+    height: 41px;
+    width: 180px;
+    margin: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 41px;
+    text-align: center;
+    border: 1px solid #cbcbcb;
+    border-bottom: 1px solid #b2b1b1;
+    color: white;
+    background: midnightblue;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, midnightblue), color-stop(0.5, darkblue));
+    background: -moz-linear-gradient(top, midnightblue 50%, darkblue 50%);
+    background: -o-linear-gradient(top, midnightblue 50%, darkblue 50%);
+    background: -ms-linear-gradient(top, midnightblue 50%, darkblue 50%);
+    background: linear-gradient(top, midnightblue 50%, darkblue 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='midnightblue 50%', endColorstr='darkblue 50%');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='midnightblue 50%', endColorstr='darkblue 50%')";
+}
+a.desk:active{  /* クリックした時 */
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: none;
 }

@@ -13,10 +13,10 @@ if(!isset($_SESSION["NAME"])){
         <link rel="stylesheet" href="koumoku.css">
         <link rel="stylesheet" href="Main.css">
     </head>
-<body>
+<body class="MAIN">
     <header>
         <nav>
-            <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
+            <img src="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
@@ -31,6 +31,9 @@ if(!isset($_SESSION["NAME"])){
         </nav>
     </header>
     <!-- ユーザーIDにHTMLタグが含まれても良いようにエスケープする -->
+    <h2>ログイン成功</h2>
     <div class="test">ようこそ<u><?php echo htmlspecialchars($_SESSION["NAME"]["name"], ENT_QUOTES, "UTF-8"); ?></u>さん</div>
+    <a href="post.php" class="top">投稿画面へ</a>
+    <a href="index.php" class="desk">一覧画面へ</a>
 </body>
 </html>

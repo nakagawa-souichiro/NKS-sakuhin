@@ -2,7 +2,7 @@
 $test = "";
 $result = "";
 if(!empty($_GET['result'])){
-    switch($_GET["result"]){
+    switch(htmlspecialchars($_GET["result"])){
         case "r1":
             $result = "登録が完了しました";
             $test = "login.php";
@@ -22,8 +22,8 @@ if(!empty($_GET['result'])){
 <link rel="stylesheet" href="koumoku.css">
 <link rel="stylesheet" href="result.css">
 </head>
-
-<body>
+​
+<body class="Result">
 <header>
         <nav>
             <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
