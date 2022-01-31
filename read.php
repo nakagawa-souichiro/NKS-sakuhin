@@ -4,25 +4,9 @@
     <meta charset="utf-8">
     <title>ビデテキgames</title>
     <link rel="stylesheet" href="koumoku.css">
-    <style>
-        #right{
-            top: 140px;
-            right: 70px;
-            bottom: 30px;
-            width: 500px;
-            position: absolute;
-            border: solid 2px black;
-        }
-        #textarea {
-            margin : 1rem auto;
-            padding : 1rem;
-        }
-        video{
-            height: 380px;
-        }
-    </style>
+    <link rel="stylesheet" href="games.css">
 </head>
-<body>
+<body class="rogo">
 	<header>
         <nav>
         	<img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
@@ -46,33 +30,37 @@
 	getUser($_SESSION["media"][0]["userid"]);
 	print($_SESSION["user"][0]["name"]);
 	?>)</h2>
-    <div>
+    <div class="vio">
         <?php
         print("<video src=\"importMedia.php\" controls></video>");
         ?>
     </div>
-    <div id="right">
+    <div class="right">
         <div id="textarea">
             <P><?=$_SESSION['media'][0]['text'] ?></P>
         </div>
     </div>
-    <p><a href="titleList.php">戻る</a>
+    <div class="right2">
+     	<a href="titleList.php" class="back">タイトル一覧に戻る</a>
+<!--     	<a href="userList.php" class="gool">投稿一覧に戻る</a> -->
+    	<p class="disp">
     <?php
     require_once ('getTitle.php');
     getTitle3($_GET["id"]);
     getTitle4($_GET["id"]);
     if(!empty($_SESSION["oldTitle"])){
-        printf("<a href=\"editRead.php?id=%d\">%s</a>",$_SESSION['oldTitle'][0]['id'],htmlspecialchars($_SESSION['oldTitle'][0]['title'], ENT_QUOTES, "UTF-8"));
+        printf("<a href=\"editRead.php?id=%d\" class=idou4>%s</a>",$_SESSION['oldTitle'][0]['id'],htmlspecialchars($_SESSION['oldTitle'][0]['title'], ENT_QUOTES, "UTF-8"));
     }else{
-        print("先頭");
+        print("先頭 ");
     }
     print("<<〇>>");
     if(!empty($_SESSION["newTitle"])){
-        printf("<a href=\"editRead.php?id=%d\">%s</a>",$_SESSION['newTitle'][0]['id'],htmlspecialchars($_SESSION['newTitle'][0]['title'], ENT_QUOTES, "UTF-8"));
+        printf("<a href=\"editRead.php?id=%d\" class=idou5>%s</a>",$_SESSION['newTitle'][0]['id'],htmlspecialchars($_SESSION['newTitle'][0]['title'], ENT_QUOTES, "UTF-8"));
     }else{
-        print("最後尾");
+        print(" 最後");
     }
     ?>
     </p>
+	</div>
 </body>
 </html>

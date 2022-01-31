@@ -1,0 +1,131 @@
+.rogo {
+    margin:0px;
+    background-color: ghostwhite;
+}
+.rogo h2 {
+    text-align: center;
+    padding: 0.4em;/*文字の上下 左右の余白*/
+    color: #494949;/*文字色*/
+    background: white;/*背景色*/
+    border-left: solid 5px mediumseagreen;/*左線*/
+    border-right: solid 5px mediumseagreen;/*右線*/
+    border-bottom: solid 3px #d7d7d7;/*下線*/
+    color:mediumseagreen;
+}
+.vio video{
+    width:50%;
+    margin-top:3px;
+    margin-left:5%;
+    margin-right:auto;
+}
+.right {
+    /*
+    margin-left:8%;
+    width: 37%;
+    top:240px;
+    right: 3%;
+    padding-bottom: 24.3%;
+    */
+    height: 350px;
+    left:59.5%;
+    width: 34%;
+    top:180px;
+    font-size:16px;
+    font-weight: bold;
+    background-color: white;
+    position: absolute;
+    border: solid 4px mediumseagreen;
+    overflow-y: scroll;
+}
+.right2{
+	left: 58.5%;
+	top: 550px;
+	width: 37%;
+	position: absolute;
+}
+#textarea {
+    margin : 1rem auto;
+    padding-left : 1rem;
+    padding-right : 1rem;
+}
+a.gool {
+    display: block;
+    padding:2px;
+    font-size:18px;
+    height: 30px;
+    width: 75%;
+    margin-top:0.5%;
+    margin-left:12%;
+    margin-right: auto;
+    margin-bottom: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    background: #FFA500;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, #FFA500), color-stop(0.5, #FFA500));
+    background: -moz-linear-gradient(top, #FFA500 50%, #FFA500 50%);
+    background: -o-linear-gradient(top, #FFA500 50%, #FFA500 50%);
+    background: -ms-linear-gradient(top, #FFA500 50%, #FFA500 50%);
+    background: linear-gradient(top, #FFA500 50%, #FFA500 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFA500 50%', endColorstr='#FFA500 50%');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#FFA500 50%', endColorstr='#FFA500 50%')";
+}
+a.gool:active{  /* クリックした時 */
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: none;
+}
+a.back {
+    display: block;
+    padding:2px;
+    font-size:18px;
+    height: 30px;
+    width: 75%;
+    margin-top:1%;
+    margin-left:12%;
+    margin-right: auto;
+    margin-bottom: 2px;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 30px;
+    text-align: center;
+    color: white;
+    background: green;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.5, green), color-stop(0.5, green));
+    background: -moz-linear-gradient(top, green 50%, green 50%);
+    background: -o-linear-gradient(top, green 50%, green 50%);
+    background: -ms-linear-gradient(top, green 50%, green 50%);
+    background: linear-gradient(top, green 50%, green 50%);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='green 50%', endColorstr='green 50%');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='green 50%', endColorstr='green 50%')";
+}
+a.back:active{  /* クリックした時 */
+    -ms-transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    transform: translateY(2px);
+    box-shadow: none;
+}
+.disp {
+    font-weight: bold;
+    width: 87.5%;
+    margin-left: auto;
+    margin-right:auto;
+    font-size: 17px;
+    text-align: center;
+    padding:10px;
+    background-color: white;
+    border: solid 3px lightskyblue;
+}
+a.idou4 {
+    color:green;
+    padding:4.5px;
+    font-size:18px;
+}
+a.idou5 {
+    color:darkviolet;
+    padding:4.5px;
+    font-size:18px;
+}
