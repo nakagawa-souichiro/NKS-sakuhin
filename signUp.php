@@ -20,12 +20,13 @@ if(!empty($_GET['error'])){
     <title>ビデテキgames</title>
     <link href="kaiin.css" rel="stylesheet"type="text/css">
     <link rel="stylesheet" href="koumoku.css">
+    <link rel="stylesheet" href="fix.css">
 </head>
-<body>
+<body class="stration">
 	<header>
         <nav>
-            <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
             <ul class="clearfix">
+                <img src ="ビデテキgamesロゴ.jpg" alt="ロゴ">
                 <li><a href="index.php">一覧へ</a></li>
                 <li><a href="post.php">投稿する</a></li>
                 <?php
@@ -39,15 +40,18 @@ if(!empty($_GET['error'])){
             </ul>
         </nav>
     </header>
-    <form action="registerSignUp.php" method="post">
+    <form action="registerSignUp.php" method="post" class="tion">
         <h2>新規会員登録</h2>
-        <p><?php if(!empty($_GET['error'])){ echo ($error);} ?></p>
-        <p><span>会員ID：</span><input type="text" name="userid" required></p>
-        <p><span>パスワード：</span><input type="password" name="password"required></p>
-        <p><span>名前：</span><input type="text" name="name"required></p>
-        <p><span>メールアドレス：</span><input type="text" name="address" required></p>
-        <!--<p>電話番号：<input type="tel" name="tel"></p>-->
-        <button type="submit" name="user">登録</button>
+        <a href="login.php" class="toma">戻る</a>
+        <fieldset style="border:2px solid mediumseagreen;" class="lid">
+            <p><?php if(!empty($_GET['error'])){ echo ($error);} ?></p>
+            <p class="team"><span>会員ID：</span><input type="text" name="userid" required class="desk"></p>
+            <p><span>パスワード：</span><input type="password" name="password"required class="desk"></p>
+            <p class="team2"><span>名前：</span><input type="text" name="name"required class="desk"></p>
+            <p class="team3"><span>メールアドレス：</span><input type="text" name="address" required class="desk"></p>
+            <!--<p>電話番号：<input type="tel" name="tel"></p>-->
+            <input type="submit" value="登録">
+        </fieldset>
         </form>
 </body>
 </html>
