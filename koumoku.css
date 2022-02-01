@@ -16,6 +16,8 @@ header nav ul {
     width: 100%;
 }
 header nav li {
+    font-weight: bold;
+    font-size:17px;
     list-style: none;
     background-color: mediumseagreen;
     text-align: center;
